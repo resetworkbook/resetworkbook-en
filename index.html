@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RESET Workbook - Delia Pia</title>
+<style>
+:root{--cream:#f5f0e8;--paper:#fbf9f5;--brown:#684d3d;--dark:#28231f;--line:#d8cbbf;--white:#fffdf9}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}body{margin:0;background:var(--paper);color:var(--dark);font-family:Arial,Helvetica,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.08;margin:0}a{text-decoration:none;color:inherit}
+.nav{position:sticky;top:0;z-index:20;background:rgba(251,249,245,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:16px 6vw;gap:16px}
+.logo{letter-spacing:.32em;font-size:18px;line-height:1}.logo small{display:block;font-size:8px;letter-spacing:.35em;text-align:center;margin-top:4px}
+.navlinks{display:flex;gap:28px;font-size:13px}.navlinks a:hover{color:var(--brown)}
+.btn{display:inline-block;background:var(--brown);color:white;padding:14px 26px;border-radius:999px;font-size:12px;letter-spacing:.12em;font-weight:700;border:0;cursor:pointer;text-transform:uppercase;line-height:1;transition:.15s}.btn:hover{background:#5a4335;transform:translateY(-1px)}
+.hero{min-height:650px;background:linear-gradient(110deg,#e9e0d5,#f7f3ec 55%,#eee5dc);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;padding:70px 8vw;gap:70px;border-bottom:1px solid var(--line)}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:#7a6557;margin-bottom:16px}.hero h1{font-size:clamp(48px,6vw,82px);max-width:700px}.subtitle{color:var(--brown);font-size:28px;margin:16px 0 20px;line-height:1.15}.lead{max-width:620px;color:#5d544d;font-size:17px;line-height:1.6}
+.price{font-family:Georgia,serif;font-size:42px;margin:26px 0 12px}.price .old{font-family:Arial,sans-serif;font-size:18px;text-decoration:line-through;color:#8a7b70;margin-left:10px;vertical-align:middle}
+.promo{display:inline-block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#684d3d;border:1px solid #cdbdaf;padding:7px 10px;margin-top:4px}.secure{font-size:12px;color:#75685f;margin-top:14px}
+.device-wrap{display:flex;justify-content:center}.tablet{width:min(360px,80%);background:#161412;border-radius:28px;padding:10px;box-shadow:0 30px 60px rgba(65,45,30,.25);transform:rotate(-2deg)}
+.screen{background:#f4eee6;min-height:480px;border-radius:20px;padding:55px 35px;display:flex;flex-direction:column;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.screen:before{content:'';position:absolute;width:280px;height:180px;border-radius:50%;background:#d9c5b4;opacity:.35;right:-90px;bottom:-40px;transform:rotate(-12deg)}
+.screen:after{content:'';position:absolute;width:230px;height:120px;border-radius:50%;background:#eadfd3;opacity:.8;left:-100px;bottom:20px;transform:rotate(15deg)}
+.cover-title{position:relative;z-index:1;font-family:Georgia,serif;font-size:42px;letter-spacing:.18em}.cover-small{position:relative;z-index:1;letter-spacing:.35em;font-size:9px;margin-top:6px}.cover-rule{width:45px;border-top:1px solid var(--brown);margin:38px auto;position:relative;z-index:1}.cover-copy{position:relative;z-index:1;font-family:Georgia,serif;font-size:18px;color:#59463a;line-height:1.4}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);background:#f8f4ee}.strip div{text-align:center;padding:28px 15px;border-right:1px solid var(--line);font-size:13px;line-height:1.4}.strip div:last-child{border:0}
+.section{padding:90px 8vw}.section.alt{background:var(--cream)}.section-head{max-width:760px;margin-bottom:42px}.section h2{font-size:clamp(38px,5vw,62px);letter-spacing:-.01em}.section-head p{color:#655b53;font-size:17px;line-height:1.6;margin-top:16px}
+.chapters{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}.chapter{padding:26px 20px 26px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:50px 1fr;gap:15px}.num{width:34px;height:34px;border-radius:50%;background:var(--brown);color:white;display:grid;place-items:center;font-size:12px}.chapter h3{font-size:24px;margin-bottom:6px}.chapter p{margin:0;color:#6a5e55;font-size:14px;line-height:1.5}
+.method{display:grid;grid-template-columns:repeat(4,1fr);margin-top:45px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.method article{text-align:center;padding:30px 22px;border-right:1px solid var(--line)}.method article:last-child{border:0}.method b{font-family:Georgia,serif;font-size:20px;font-weight:400}.method p{font-size:14px;color:#6b615a;margin-top:10px;line-height:1.5}
+.challenge{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.challenge p{color:#655b53;font-size:16px;line-height:1.6}.challenge-card{background:#e7ddd2;padding:48px 40px;border-radius:4px}.days{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:24px}.days span{background:#f9f6f1;border:1px solid var(--line);padding:13px 5px;text-align:center;font-size:10px;letter-spacing:.06em}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:60px}.list{list-style:none;padding:0;margin:20px 0}.list li{padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5;color:#4a3f39}.list li:before{content:'✓';color:var(--brown);font-weight:700;margin-right:10px}
+.format-card{border:1px solid var(--line);padding:35px;background:#fffdf9;display:flex;flex-direction:column;gap:12px}.format-card h3{font-size:32px}.format-card p{font-size:15px;color:#655b53;margin:0 0 8px}
+.email-card{max-width:620px;margin:0 auto;background:#fffdf9;border:1px solid #d8cbbf;padding:34px}.reset-label{font-size:16px;margin-bottom:10px;display:block}.reset-input{width:100%;border:1px solid #d8cbbf;background:#fffdf9;padding:16px 18px;font-size:16px;outline:none}.reset-consent-row{display:flex;gap:12px;align-items:flex-start;margin-top:22px}.reset-checkbox{width:22px;height:22px;min-width:22px;border:1.5px solid #9a8a7e;background:#fffdf9;border-radius:6px;display:grid;place-items:center;cursor:pointer}.reset-checkbox.checked{background:var(--brown);border-color:var(--brown);color:white}.reset-consent-text{font-size:13px;line-height:1.5;color:#7a6b60}.reset-submit-btn{margin-top:26px;padding:17px 32px;font-size:13px}.reset-note{font-size:12px;line-height:1.55;color:#8a7b70;margin:20px 0 0}.reset-error{font-size:12px;color:#a65a44;margin-top:10px}.reset-success{background:#f5f0e8;border:1px solid #d8cbbf;padding:22px}.reset-success h4{font-family:Georgia,serif;font-size:22px;margin:0 0 8px}
+.final{background:var(--brown);color:white;text-align:center;padding:90px 8vw}.final h2{font-size:52px;color:white}.final p{max-width:650px;margin:20px auto 30px;color:#eee6de;font-size:16px;line-height:1.6}.final .btn{background:white;color:var(--brown)}
+footer{padding:28px 8vw;background:#453328;color:#eee;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:900px){.navlinks{display:none}.hero,.challenge,.twocol{grid-template-columns:1fr}.strip{grid-template-columns:1fr 1fr}.method{grid-template-columns:1fr 1fr}.chapters{grid-template-columns:1fr}.section{padding:65px 6vw}.device-wrap{order:-1}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#top">RESET<small>WORKBOOK</small></a>
+  <nav class="navlinks">
+    <a href="#percorso">Inside</a><a href="#metodo">Method</a><a href="#challenge">30 Days</a><a href="#faq">FAQ</a><a href="#lista-email">Free Guide</a>
+  </nav>
+  <a class="btn" href="#acquista">BUY NOW →</a>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow">Available now · Digital & Paperback</div>
+    <h1>RESET Workbook</h1>
+    <div class="subtitle">Make space. Find clarity. Begin again.</div>
+    <p class="lead">A practical path of reflection, observation and concrete exercises to create mental space and learn to manage what occupies your time, energy and attention.</p>
+    <div class="promo">AVAILABLE NOW</div>
+    <div class="price">From $9.90 <span class="old">$12.90</span></div>
+    <div style="margin-top:18px"><a class="btn" href="#acquista">CHOOSE YOUR VERSION →</a></div>
+    <div class="secure"><strong>Available now</strong> · Digital PDF and paperback version</div>
+  </div>
+  <div class="device-wrap"><div class="tablet"><div class="screen"><div class="cover-title">RESET</div><div class="cover-small">WORKBOOK</div><div class="cover-rule"></div><div class="cover-copy">Make space.<br>Find clarity.<br>Begin again.</div></div></div></div>
+</section>
+
+<section class="strip">
+  <div><strong>10 chapters</strong><br>of guided work</div><div><strong>Practical</strong><br>exercises</div><div><strong>Home &</strong><br>digital reset</div><div><strong>30-Day</strong><br>RESET challenge</div>
+</section>
+
+<section class="section" id="percorso">
+  <div class="section-head"><div class="eyebrow">What's inside RESET</div><h2>A path to make space, one step at a time.</h2><p>RESET doesn't promise a perfect life or an unrealistic routine. It starts with observation and moves forward with small, concrete and sustainable changes.</p></div>
+  <div class="chapters">
+    <div class="chapter"><div class="num">01</div><div><h3>Pause to Restart</h3><p>Observe your daily life and what occupies your time, energy and mental space.</p></div></div>
+    <div class="chapter"><div class="num">02</div><div><h3>Make Space Before Organizing</h3><p>Reduce, eliminate, delegate and create margin before adding new systems.</p></div></div>
+    <div class="chapter"><div class="num">03</div><div><h3>Mental Reset</h3><p>A Brain Dump to get out of your head everything you're trying to keep in mind.</p></div></div>
+    <div class="chapter"><div class="num">04</div><div><h3>Home Reset</h3><p>Lighten one micro-area with KEEP, MOVE, LET GO and DECIDE LATER.</p></div></div>
+    <div class="chapter"><div class="num">05</div><div><h3>Digital Reset</h3><p>Reclaim your attention and reduce notifications and automatic distractions.</p></div></div>
+    <div class="chapter"><div class="num">06</div><div><h3>Time Reset</h3><p>Create more margin and build a more sustainable relationship with time.</p></div></div>
+    <div class="chapter"><div class="num">07</div><div><h3>Life Reset</h3><p>Choose what to keep and what you no longer want to carry out of habit.</p></div></div>
+    <div class="chapter"><div class="num">08</div><div><h3>Weekly Reset</h3><p>Return to center when your week starts to fill up.</p></div></div>
+    <div class="chapter"><div class="num">09</div><div><h3>30-Day Reset Challenge</h3><p>Thirty days of small concrete actions to experience what it means to make more space.</p></div></div>
+    <div class="chapter"><div class="num">10</div><div><h3>Your Personal System</h3><p>Choose the practices you want to keep and know where to restart when you need it.</p></div></div>
+  </div>
+</section>
+
+<section class="section alt" id="metodo">
+  <div class="section-head"><div class="eyebrow">The RESET Method</div><h2>Before organizing, make space.</h2><p>The method follows five steps: recognize what takes up space, eliminate what you no longer need, simplify, create balance and transform what remains.</p></div>
+  <div class="method">
+    <article><b>R — RECOGNIZE</b><p>Look at what takes up space without trying to fix it right away.</p></article>
+    <article><b>E — ELIMINATE</b><p>Remove what you no longer need, even if you've learned to live with it.</p></article>
+    <article><b>S — SIMPLIFY</b><p>Reduce steps, decisions and complexity where possible.</p></article>
+    <article><b>E — EASE</b><p>Leave margin between what you have to do and how you want to live.</p></article>
+  </div>
+  <div style="text-align:center;margin-top:25px"><b style="font-family:Georgia,serif;font-size:20px">T — TRANSFORM</b><p style="color:#766a61;margin-top:6px">Build a more sustainable way to manage what remains.</p></div>
+</section>
+
+<section class="section" id="challenge"><div class="challenge"><div><div class="eyebrow">At the End of the Path</div><h2>30-Day Reset Challenge</h2><p>Thirty days are not for becoming a new person. They are for experiencing what happens when, for a month, you choose to make a little more space.</p><p style="margin-top:14px"><strong>If you skip a day, don't start over: keep going.</strong></p></div><div class="challenge-card"><div class="eyebrow">One Day at a Time</div><h3 style="font-size:32px">Small actions. More space.</h3><div class="days"><span>SNAPSHOT</span><span>BRAIN DUMP</span><span>ELIMINATE</span><span>MICRO-AREA</span><span>NOTIFICATIONS</span><span>ONE DECISION</span><span>WEEKLY RESET</span><span>PAUSE</span><span>DELEGATE</span><span>PROTECT</span></div></div></div></section>
+
+<section class="section alt"><div class="twocol"><div><div class="eyebrow">This workbook is for you if...</div><ul class="list"><li>you feel you have too much to do;</li><li>you often feel weighed down by daily commitments;</li><li>you struggle to know where to start;</li><li>you feel the need to create some order;</li><li>you want to give yourself space to pause and reflect;</li><li>you prefer a practical path made of exercises and activities.</li></ul></div><div><div class="eyebrow">Maybe it's not the right time if...</div><p style="color:#655b53;font-size:15px;line-height:1.6">You're looking for an instant solution that does everything for you.</p><p style="color:#655b53;font-size:15px;line-height:1.6;margin-top:12px">RESET requires your participation: part of the value comes from the time you choose to dedicate to activities and reflections.</p></div></div></section>
+
+<section class="section" id="formati"><div class="section-head"><div class="eyebrow">Choose Your Format</div><h2>RESET, Your Way.</h2><p>The content is the same: choose between the convenience of digital or the paperback to keep with you.</p></div><div class="twocol"><div class="format-card"><div class="eyebrow">DIGITAL VERSION</div><h3>$9.90 <span style="font-family:Arial;font-size:14px;text-decoration:line-through;color:#8a7b70">$12.90</span></h3><p>Get the workbook instantly as PDF.</p><a class="btn" href="https://payhip.com/b/fnQcz" target="_blank">BUY DIGITAL VERSION →</a></div><div class="format-card"><div class="eyebrow">PAPERBACK</div><h3>$12.90 <span style="font-family:Arial;font-size:14px;text-decoration:line-through;color:#8a7b70">$14.90</span></h3><p>Buy RESET paperback on Amazon.</p><a class="btn" href="https://www.amazon.com" target="_blank">BUY PAPERBACK →</a></div></div></section>
+
+<section class="section alt" id="faq"><div class="section-head"><div class="eyebrow">Frequently Asked Questions</div><h2>Before You Start.</h2></div><div class="twocol"><div><div style="margin-bottom:32px"><h3 style="font-size:20px;margin-bottom:8px">Which versions are available?</h3><p style="color:#655b53;font-size:15px;line-height:1.6">You can choose between digital PDF and paperback. Digital is available instantly.</p></div><div style="margin-bottom:32px"><h3 style="font-size:20px;margin-bottom:8px">How long is the path?</h3><p style="color:#655b53;font-size:15px;line-height:1.6">The path includes 10 chapters and a 30-day Challenge.</p></div></div><div><div style="margin-bottom:32px"><h3 style="font-size:20px;margin-bottom:8px">Do I have to do everything at once?</h3><p style="color:#655b53;font-size:15px;line-height:1.6">No. The workbook invites you to proceed one step at a time, starting from small and concrete changes.</p></div><div style="margin-bottom:32px"><h3 style="font-size:20px;margin-bottom:8px">What if I skip a day?</h3><p style="color:#655b53;font-size:15px;line-height:1.6">The rule of the challenge is simple: don't start over, keep going.</p></div></div></div></section>
+
+<section class="section alt" id="lista-email">
+  <div class="section-head"><div class="eyebrow">FREE MINI GUIDE</div><h2>Want your RESET gift?</h2><p style="max-width:620px;font-size:17px;line-height:1.6;color:#5d544d">Subscribe and get the <strong>RESET Mini Guide</strong> for free: a short practical exercise to create space in your mind.</p></div>
+  <div class="email-card">
+    <div id="formWrap">
+      <form id="resetForm" onsubmit="return false">
+        <label class="reset-label">Your email</label>
+        <input id="emailInput" class="reset-input" type="email" placeholder="name@email.com">
+        <div class="reset-consent-row"><button type="button" id="consBtn" class="reset-checkbox"></button><span class="reset-consent-text">I agree to receive communications about RESET and the free Mini Guide.</span></div>
+        <div id="err" class="reset-error"></div>
+        <button type="submit" id="submitBtn" class="btn reset-submit-btn">SUBSCRIBE →</button>
+        <p class="reset-note">You'll receive the Mini Guide and later updates about RESET.</p>
+      </form>
+      <div id="successBox" class="reset-success" style="display:none"><h4>Check your inbox!</h4><p>Your Mini Guide is on its way. If you don't see it, check spam.</p><button class="btn" style="margin-top:16px" onclick="resetForm()">Send another</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="acquista"><div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px">AVAILABLE NOW</div><h2>Your Space for RESET.</h2><p>Choose your preferred format and get the RESET Workbook. Both versions are available now.</p><div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:28px"><a class="btn" href="https://payhip.com/b/fnQcz" target="_blank">DIGITAL · $9.90 →</a><a class="btn" href="https://www.amazon.com" target="_blank">PAPERBACK · $12.90 →</a></div><div style="margin-top:18px;font-size:12px;color:#e9ddd3">Digital $9.90 (instead of $12.90) · Paperback $12.90 (instead of $14.90)</div></section>
+</main>
+
+<footer><span>RESET WORKBOOK · Delia Pia</span><span>© 2026 · All rights reserved</span></footer>
+
+<script>
+let consent=false,email='';
+const consBtn=document.getElementById('consBtn'), emailInput=document.getElementById('emailInput'), err=document.getElementById('err'), successBox=document.getElementById('successBox'), form=document.getElementById('resetForm');
+consBtn.onclick=()=>{consent=!consent; consBtn.classList.toggle('checked',consent); consBtn.textContent=consent?'✓':''}
+function resetForm(){form.style.display='block';successBox.style.display='none';document.getElementById('emailInput').value='';consent=false;consBtn.classList.remove('checked');consBtn.textContent='';err.textContent=''}
+document.getElementById('submitBtn').onclick=()=>{
+  email=emailInput.value.trim();
+  if(!email.includes('@')||!email.includes('.')){err.textContent="Enter a valid email";return}
+  if(!consent){err.textContent="Please accept to continue";return}
+  err.textContent=''; form.style.display='none'; successBox.style.display='block';
+}
+</script>
+</body>
+</html>
